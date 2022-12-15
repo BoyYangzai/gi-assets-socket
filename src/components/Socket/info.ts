@@ -1,7 +1,7 @@
 const info = {
-  id: "Counter",
-  name: "计数器",
-  desc: "计数器",
+  id: "Socket",
+  name: "Socket",
+  desc: "Socket",
   cover: "http://xxx.jpg",
   category: "system-interaction",
   icon: "icon-copyright",

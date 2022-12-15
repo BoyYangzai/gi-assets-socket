@@ -3,7 +3,7 @@ import { services as GI_ASSETS_BASIC_SERVER } from '@antv/gi-assets-basic';
 import GISDK, { utils } from '@antv/gi-sdk';
 import ThemeSwitch from '@antv/gi-theme-antd';
 import React from 'react';
-import { Counter } from '../components';
+import { Socket } from '../components';
 import { GI_PROJECT_CONFIG, SERVER_ENGINE_CONTEXT, THEME_VALUE } from './GI_EXPORT_FILES';
 import update from './update';
 /** 资产可按需引入 **/
@@ -49,7 +49,7 @@ const ASSETS = {
     Toolbar,
     Placeholder,
     //自定义组件
-    Counter,
+    Socket,
   },
   elements: { SimpleNode, SimpleEdge },
   layouts: { GraphinForce, Concentric, Dagre, FundForce },

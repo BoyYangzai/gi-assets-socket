@@ -2,7 +2,7 @@ import type { GIConfig } from '@antv/gi-sdk';
 
 const update = (GI_PROJECT_CONFIG: GIConfig) => {
   GI_PROJECT_CONFIG.components.push({
-    id: 'Counter',
+    id: 'Socket',
     props: {},
   });
   console.log('update', GI_PROJECT_CONFIG);
