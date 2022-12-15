@@ -6,7 +6,8 @@
   "scripts": {
     "build": "father build && npm run build:umd",
     "build:umd": "webpack  --mode production  -c ./webpack.config.js",
-    "start": "umi dev"
+    "start": "umi dev",
+    "socket": "cd socket-server && npm run start"
   },
   "keywords": ["GraphInsight", "gi-asstes"],
   "authors": [],
@@ -30,7 +31,8 @@
     "@antv/graphin": "2.x",
     "antd": "4.x",
     "react": "17.x",
-    "react-dom": "17.x"
+    "react-dom": "17.x",
+    "socket.io":"latest"
    },
    "devDependencies": {
     "@types/react": "^18.0.0",

@@ -1,7 +1,30 @@
 import { useContext } from '@antv/gi-sdk';
-import React from 'react';
-const Counter = props => {
+import React, { useEffect } from 'react';
+import io from 'socket.io/client-dist/socket.io'
+const socket = io('http://localhost:8080')
+/**
+ * 无关代码
+ */
+let num = 0
+setInterval(() => {
+ // 不用管这个socket
+  socket.emit('update',num++)
+}, 1000)
+  /**
+ * 无关代码
+ */
 
+const Socket = props => {
+
+  // Socket核心代码
+  const { updateContext, transform } = useContext()
+  useEffect(() => {
+    socket.on('update', (res) => {
+      updateContext(draft => {
+        draft.data=transform(res)
+      })
+    })
+  }, [])
 
   return (
     <div
@@ -17,4 +40,4 @@ const Counter = props => {
   );
 };
 
-export default Counter;
+export default Socket;
