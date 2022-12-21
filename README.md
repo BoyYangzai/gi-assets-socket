@@ -8,4 +8,4 @@ npm run start
 ```
 
 
-核心代码在 `src/components/Socket/Component.tsx` 中
+核心代码在 `src/components/socket/Component.tsx` 中
